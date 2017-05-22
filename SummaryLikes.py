@@ -12,10 +12,10 @@ from xlutils.copy import copy
 
 
 #AccessToken y version de el api GRAPH
-graph = facepy.GraphAPI('EAACEdEose0cBADs74FaTJfZClzTcwYhwyjPZCPVqcxolEkBTjFg8t8ORbi6I1tqf3JBhPCSumEb2m1Ka2h2hbI1MvZCb23UkIi6pH1zjaWiObH90ZAVEjiWTdij54gdTZBAZC3CKLoQ4BzIOSuVtjDOKqjSu7Yj5FBzTh6AK9Pv9VMaP6ZChdZBw',version='2.9')
+graph = facepy.GraphAPI('YOUR-ACCESS-TOKEN-HERE',version='2.9')
 
 #Datos del libro de excel a leer para sacar los datos
-book = xlrd.open_workbook('PostsTecNacional.xlsx')
+book = xlrd.open_workbook('WORKBOOK-NAME.xlsx')
 max_nb_row = 0
 wb = xlwt.Workbook()
 ws = wb.add_sheet('Datos de posts')
@@ -69,4 +69,4 @@ for row in range(max_nb_row) :
 
 
 #Se graba el libro de excel con los resultados
-wb.save('ResultadosTecNacional.xls')
+wb.save('OUTPUT-WORBOOK_NAME.xls')
